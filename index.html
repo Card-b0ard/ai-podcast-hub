@@ -807,9 +807,13 @@
 <body>
   <div class="app">
     <main id="homePage" class="page active">
-      <div class="container topbar">
-        <h1 class="brand">AI Podcast Hub</h1>
-        <p class="subtitle">Explore podcasts across technology, science, geography, and history. Discover ideas, play episodes, or create your own instantly using AI.</p>
+      <div class="container topbar" style="display:flex; justify-content:space-between; align-items:flex-start; gap:16px;">
+        <div>
+          <h1 class="brand">AI Podcast Hub</h1>
+          <p class="subtitle">Explore podcasts across technology, science, geography, and history. Discover ideas, play episodes, or create your own instantly using AI.</p>
+        </div>
+
+        <button id="aboutBtn" class="dock-btn" style="margin-top:6px;">About Us</button>
       </div>
 
       <div class="container section">
@@ -857,6 +861,89 @@
         </div>
       </div>
     </section>
+    <section id="aboutPage" class="page">
+  <div class="container" style="padding-top: 18px; padding-bottom: 40px;">
+
+    <button id="aboutBackBtn" class="back-btn" style="margin-bottom:16px;">←</button>
+
+    <div class="panel" style="padding: 34px; border-radius: 28px; margin-bottom: 24px; overflow: hidden;">
+      <div style="display:inline-block; padding:8px 12px; border-radius:999px; background: rgba(0,0,0,0.06); margin-bottom:14px; font-size:.85rem; font-weight:650;">
+        About Us
+      </div>
+      <h2 style="margin:0; font-size: clamp(2rem, 4vw, 3.4rem); letter-spacing: -0.06em; line-height: 1.02;">
+        A creative multimedia portfolio built around podcasts and AI storytelling.
+      </h2>
+      <p style="margin: 14px 0 0; max-width: 860px; line-height: 1.7; color: var(--muted);">
+        This website brings together curated podcast content, an interactive player, and an AI-style generator into one polished experience. It is designed to showcase creative work in a modern, easy-to-browse format while keeping everything simple, responsive, and visually consistent.
+      </p>
+    </div>
+
+    <div class="panel" style="margin-bottom:24px;">
+      <h3 style="margin:0 0 12px;">About this website</h3>
+      <p style="margin:0; line-height:1.7; color: var(--muted);">
+        AI Podcast Hub is an interactive site where users can explore podcast episodes by category, search through tags, open episode details, and play audio in a mini player. It also includes an AI-inspired podcast generator page for creating topic-based podcast scripts. The layout is built to feel clean, modern, and easy to navigate on both desktop and mobile.
+      </p>
+    </div>
+
+    <div class="panel">
+      <h3 style="margin:0 0 18px;">Our team</h3>
+
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px;">
+
+        <div class="panel" style="padding:16px;">
+          <img src="portraits/member1.jpg" alt="Member 1" style="width:100%; aspect-ratio: 4 / 5; object-fit:cover; border-radius:18px; display:block; margin-bottom:12px;">
+          <h4 style="margin:0 0 8px;">Member 1</h4>
+          <p style="margin:0; color:var(--muted); line-height:1.6; min-height: 6em;">text here</p>
+          <div style="margin-top:12px;">
+            <div style="font-size:.85rem; color:var(--muted); margin-bottom:8px;">Media placeholder</div>
+            <div class="upload-drop" style="margin:0;">Replace this with an audio or video file from the podcasts folder.</div>
+          </div>
+        </div>
+
+        <div class="panel" style="padding:16px;">
+          <img src="portraits/member2.jpg" alt="Member 2" style="width:100%; aspect-ratio: 4 / 5; object-fit:cover; border-radius:18px; display:block; margin-bottom:12px;">
+          <h4 style="margin:0 0 8px;">Member 2</h4>
+          <p style="margin:0; color:var(--muted); line-height:1.6; min-height: 6em;">text here</p>
+          <div style="margin-top:12px;">
+            <div style="font-size:.85rem; color:var(--muted); margin-bottom:8px;">Media placeholder</div>
+            <div class="upload-drop" style="margin:0;">Replace this with an audio or video file from the podcasts folder.</div>
+          </div>
+        </div>
+
+        <div class="panel" style="padding:16px;">
+          <img src="portraits/member3.jpg" alt="Member 3" style="width:100%; aspect-ratio: 4 / 5; object-fit:cover; border-radius:18px; display:block; margin-bottom:12px;">
+          <h4 style="margin:0 0 8px;">Member 3</h4>
+          <p style="margin:0; color:var(--muted); line-height:1.6; min-height: 6em;">text here</p>
+          <div style="margin-top:12px;">
+            <div style="font-size:.85rem; color:var(--muted); margin-bottom:8px;">Media placeholder</div>
+            <div class="upload-drop" style="margin:0;">Replace this with an audio or video file from the podcasts folder.</div>
+          </div>
+        </div>
+
+        <div class="panel" style="padding:16px;">
+          <img src="portraits/member4.jpg" alt="Member 4" style="width:100%; aspect-ratio: 4 / 5; object-fit:cover; border-radius:18px; display:block; margin-bottom:12px;">
+          <h4 style="margin:0 0 8px;">Member 4</h4>
+          <p style="margin:0; color:var(--muted); line-height:1.6; min-height: 6em;">text here</p>
+          <div style="margin-top:12px;">
+            <div style="font-size:.85rem; color:var(--muted); margin-bottom:8px;">Media placeholder</div>
+            <div class="upload-drop" style="margin:0;">Replace this with an audio or video file from the podcasts folder.</div>
+          </div>
+        </div>
+
+        <div class="panel" style="padding:16px;">
+          <img src="portraits/member5.jpg" alt="Member 5" style="width:100%; aspect-ratio: 4 / 5; object-fit:cover; border-radius:18px; display:block; margin-bottom:12px;">
+          <h4 style="margin:0 0 8px;">Member 5</h4>
+          <p style="margin:0; color:var(--muted); line-height:1.6; min-height: 6em;">text here</p>
+          <div style="margin-top:12px;">
+            <div style="font-size:.85rem; color:var(--muted); margin-bottom:8px;">Media placeholder</div>
+            <div class="upload-drop" style="margin:0;">Replace this with an audio or video file from the podcasts folder.</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
   </div>
 
   <div class="dock">
@@ -1175,11 +1262,14 @@
       uploadDescription: document.getElementById('uploadDescription')
     };
 
-    function openPage(page) {
-      const isAI = page === 'ai';
-      document.body.classList.toggle('ai-mode', isAI);
-      els.homePage.classList.toggle('active', !isAI);
-      els.aiPage.classList.toggle('active', isAI);
+  function openPage(page) {
+    const isAI = page === 'ai';
+    const isAbout = page === 'about';
+
+    document.body.classList.toggle('ai-mode', isAI);
+    els.homePage.classList.toggle('active', !isAI && !isAbout);
+    els.aiPage.classList.toggle('active', isAI);
+    document.getElementById('aboutPage').classList.toggle('active', isAbout);
     }
 
     function escapeHtml(str) {
@@ -1861,6 +1951,9 @@
     }
 
     function wireEvents() {
+      document.getElementById('aboutBtn').addEventListener('click', () => openPage('about'));
+      document.getElementById('aboutBackBtn').addEventListener('click', () => openPage('home'));
+      
       els.searchInput.addEventListener('input', renderLibrary);
 
       els.addBtn.addEventListener('click', openAddModal);
