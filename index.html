@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Podcast Hub</title>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body>
+  <div class="app">
+    <main id="homePage" class="page active">
+      <div class="container topbar app-header">
+        <div class="app-header__copy">
+          <h1 class="brand">AI Podcast Hub</h1>
+          <p class="subtitle">
+            Explore podcasts across technology, science, geography, and history.
+            Discover ideas, play episodes, or create your own instantly using AI.
+          </p>
+        </div>
+
+        <div class="app-header__actions">
+          <button id="darkModeToggle" class="nav-action-btn" aria-label="Toggle dark mode">🌙</button>
+          <button id="aiOpenBtn" class="nav-action-btn" type="button">AI Studio</button>
+          <button id="addBtn" class="nav-action-btn" type="button">Upload</button>
+          <button id="aboutBtn" class="nav-action-btn" type="button">About Us</button>
+        </div>
+      </div>
+
+      <div class="container section">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Featured categories</h2>
+            <p class="section-hint">Tap a card to jump to that section.</p>
+          </div>
+        </div>
+
+        <div id="heroRow" class="hero-row"></div>
+      </div>
+
+      <div class="container section" id="continueListeningSection" style="display: none;">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Continue Listening</h2>
+            <p class="section-hint">Pick up where you left off.</p>
+          </div>
+        </div>
+        <div id="continueListeningContent" class="carousel"></div>
+      </div>
+
+      <div class="container section" id="recentlyPlayedSection" style="display: none;">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Recently Played</h2>
+            <p class="section-hint">Your listening history.</p>
+          </div>
+        </div>
+        <div id="recentlyPlayedContent" class="carousel"></div>
+      </div>
+
+      <div class="container section" id="favoritesSection" style="display: none;">
+        <div class="section-header">
+          <div>
+            <h2 class="section-title">Your Favorites</h2>
+            <p class="section-hint">Episodes you've starred for later.</p>
+          </div>
+        </div>
+        <div id="favoritesContent" class="carousel"></div>
+      </div>
+
+      <div class="container section" id="librarySections"></div>
+    </main>
+
+    <section id="aiPage" class="page">
+      <div class="container page-shell">
+        <div class="ai-shell">
+          <div class="ai-top">
+            <button class="back-btn" id="aiBackBtn" aria-label="Back to home" type="button">←</button>
+            <div>
+              <div class="ai-top__eyebrow">AI Studio</div>
+              <div class="ai-top__title">Podcast Generator</div>
+            </div>
+          </div>
+
+          <div class="ai-content">
+            <div class="ai-card">
+              <div class="ai-kicker">Offline AI studio</div>
+              <h2>Create a podcast from one idea.</h2>
+              <p>
+                Type a topic and the page will build a richer podcast-style script, then speak it aloud using the
+                browser voice engine.
+              </p>
+
+              <div class="ai-form">
+                <input id="aiPrompt" class="ai-input" placeholder="Say the podcast topic..." />
+                <div class="ai-actions">
+                  <button class="ai-btn primary" id="aiGenerateBtn" type="button">Generate &amp; Speak</button>
+                  <button class="ai-btn secondary" id="aiClearBtn" type="button">Clear</button>
+                </div>
+              </div>
+
+              <div id="aiOutput" class="ai-output" aria-live="polite">
+                <div class="ai-output__placeholder">Your generated script will appear here.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="aboutPage" class="page">
+      <div class="container about-layout">
+        <button id="aboutBackBtn" class="back-btn back-btn-light" type="button">← Back</button>
+
+        <div class="panel about-hero">
+          <div class="about-chip">About Us</div>
+          <h2>A creative multimedia portfolio built around podcasts and AI storytelling.</h2>
+          <p>
+            This website brings together curated podcast content, an interactive player, and an AI-powered style
+            generator into one polished experience.
+            It is designed to showcase creative work in a modern, easy-to-browse format while keeping everything
+            responsive and visually consistent.
+          </p>
+        </div>
+
+        <div class="panel">
+          <h3 class="panel-title">About this website</h3>
+          <p class="about-copy">
+            AI Podcast Hub is an interactive site where users can explore podcast episodes by category, search through
+            tags, open episode details,
+            and play audio in a mini player. It also includes an upgraded AI Studio for creating topic-based podcast
+            scripts with voice playback.
+          </p>
+        </div>
+
+        <div class="panel">
+          <h3 class="panel-title panel-title-spacious">Our team</h3>
+          <div id="teamGrid" class="team-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="technologyPage" class="page category-page">
+      <div class="container page-shell">
+        <div class="category-shell">
+          <div class="category-top">
+            <button class="back-btn" id="technologyBackBtn" aria-label="Back to home" type="button">←</button>
+            <div>
+              <div class="category-top__eyebrow">Technology</div>
+              <div class="category-top__title">AI, gadgets, the internet, and future tools.</div>
+            </div>
+          </div>
+          <div id="technologyContent" class="category-content"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sciencePage" class="page category-page">
+      <div class="container page-shell">
+        <div class="category-shell">
+          <div class="category-top">
+            <button class="back-btn" id="scienceBackBtn" aria-label="Back to home" type="button">←</button>
+            <div>
+              <div class="category-top__eyebrow">Science</div>
+              <div class="category-top__title">Space, biology, physics, and everyday discoveries.</div>
+            </div>
+          </div>
+          <div id="scienceContent" class="category-content"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="geographyPage" class="page category-page">
+      <div class="container page-shell">
+        <div class="category-shell">
+          <div class="category-top">
+            <button class="back-btn" id="geographyBackBtn" aria-label="Back to home" type="button">←</button>
+            <div>
+              <div class="category-top__eyebrow">Geography</div>
+              <div class="category-top__title">Places, landforms, climate, and global patterns.</div>
+            </div>
+          </div>
+          <div id="geographyContent" class="category-content"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="historyPage" class="page category-page">
+      <div class="container page-shell">
+        <div class="category-shell">
+          <div class="category-top">
+            <button class="back-btn" id="historyBackBtn" aria-label="Back to home" type="button">←</button>
+            <div>
+              <div class="category-top__eyebrow">History</div>
+              <div class="category-top__title">Events, empires, revolutions, and famous moments.</div>
+            </div>
+          </div>
+          <div id="historyContent" class="category-content"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="dock">
+    <div class="dock-bar">
+      <div class="dock-input-wrap" title="Search by title, category, or tags">
+        <span>🔍</span>
+        <input id="searchInput" type="text" placeholder="Search podcasts by title, category, or tags..." />
+        <div id="searchSuggestions" class="search-suggestions"></div>
+
+        <div class="mini-player">
+          <div id="miniCover" class="mini-cover">AI</div>
+          <div class="mini-text">
+            <h4 id="miniTitle">Nothing playing</h4>
+            <p id="miniMeta">Choose an episode to send it here.</p>
+          </div>
+          <div class="mini-controls">
+            <button id="miniSkipBackBtn" class="icon-btn" title="Previous track" disabled type="button">⏮️</button>
+            <button id="miniPlayPauseBtn" class="icon-btn primary" title="Play or pause" disabled
+              type="button">▶</button>
+            <button id="miniSpeedBtn" class="icon-btn" title="Playback speed" disabled type="button">1x</button>
+            <button id="miniSkipForwardBtn" class="icon-btn" title="Next track" disabled type="button">⏭️</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="detailModal" class="modal" aria-hidden="true">
+        <div class="modal-box">
+          <div class="modal-header">
+            <h3>Episode details</h3>
+            <button id="closeDetailBtn" class="icon-btn" aria-label="Close details" type="button">✕</button>
+          </div>
+          <div class="modal-body">
+            <div class="detail-layout">
+              <div id="detailCover" class="detail-cover"><span>EP</span></div>
+              <div class="detail-info">
+                <h4 id="detailTitle">Title</h4>
+                <p id="detailDesc">Description</p>
+                <div id="detailMeta" class="meta detail-meta"></div>
+                <div id="detailTags" class="detail-tags"></div>
+                <div class="detail-actions">
+                  <button id="detailPlayBtn" class="btn dark" type="button">Play in mini player</button>
+                  <button id="detailCloseBtn" class="btn light" type="button">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="addModal" class="modal" aria-hidden="true">
+        <div class="modal-box">
+          <div class="modal-header">
+            <h3>Add an MP3</h3>
+            <button id="closeAddBtn" class="icon-btn" aria-label="Close add form" type="button">✕</button>
+          </div>
+          <div class="modal-body">
+            <div class="upload-drop">
+              Choose an MP3, then give it a title, category, duration, and 4 tags.
+              The upload is saved locally in this browser so it stays after refresh on the same device.
+            </div>
+
+            <div class="field-grid">
+              <div class="field full">
+                <label for="uploadFile">MP3 file</label>
+                <input id="uploadFile" type="file" accept="audio/mpeg,audio/mp3,audio/*" />
+              </div>
+
+              <div class="field">
+                <label for="uploadTitle">Title</label>
+                <input id="uploadTitle" type="text" placeholder="Episode title" />
+              </div>
+
+              <div class="field">
+                <label for="uploadCategory">Category</label>
+                <select id="uploadCategory">
+                  <option>Technology</option>
+                  <option>Science</option>
+                  <option>Geography</option>
+                  <option>History</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="uploadDuration">Duration</label>
+                <input id="uploadDuration" type="text" placeholder="Auto-filled after choosing file" />
+              </div>
+
+              <div class="field">
+                <label for="uploadTags">4 tags, comma separated</label>
+                <input id="uploadTags" type="text" placeholder="tag1, tag2, tag3, tag4" />
+              </div>
+
+              <div class="field full">
+                <label for="uploadDescription">Short description</label>
+                <textarea id="uploadDescription" placeholder="What is this episode about?"></textarea>
+              </div>
+            </div>
+
+            <div class="detail-actions">
+              <button id="saveUploadBtn" class="btn dark" type="button">Save episode</button>
+              <button id="cancelUploadBtn" class="btn light" type="button">Cancel</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <audio id="audioPlayer"></audio>
+
+      <script src="assets/js/data.js"></script>
+      <script src="assets/js/app.js"></script>
+</body>
+
+</html>
