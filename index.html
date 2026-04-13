@@ -135,22 +135,44 @@
           </div>
 
           <!-- RIGHT SIDE (CLICKABLE PODCAST CARD) -->
-          <div style="flex:1; display:flex; justify-content:center;">
-    
-            <div onclick="playEpisode({
-              title: 'About Us',
-              audio: 'about_us/about_us.mp3',
-              cover: 'covers/about_us.png',
-              category: 'General',
-              duration: '1:00'
-            })"
-            style="cursor:pointer; max-width:280px; width:100%; border-radius:18px; overflow:hidden; transition:transform 0.2s;">
+        <div style="flex:1; display:flex; justify-content:center;">
 
-               <img src="covers/about_us.png" style="width:100%; display:block;">
+  <div style="position:relative; max-width:280px; width:100%; border-radius:18px; overflow:hidden;">
 
-           </div>
+    <!-- COVER IMAGE -->
+    <img src="covers/about_us.png" style="width:100%; display:block;">
 
-         </div>
+    <!-- PLAY BUTTON -->
+    <button onclick="playEpisode({
+      title: 'About Us',
+      audio: 'about_us/about_us.mp3',
+      cover: 'covers/about_us.png',
+      category: 'General',
+      duration: '1:00'
+    })"
+    style="
+      position:absolute;
+      bottom:12px;
+      right:12px;
+      width:44px;
+      height:44px;
+      border-radius:50%;
+      border:none;
+      background:#111;
+      color:white;
+      font-size:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+      box-shadow:0 4px 12px rgba(0,0,0,0.3);
+    ">
+      ▶
+    </button>
+
+  </div>
+
+</div>
 
       </div>
 
