@@ -124,15 +124,35 @@
           </p>
         </div>
 
-        <div class="panel">
-          <h3 class="panel-title">About this website</h3>
-          <p class="about-copy">
-            AI Podcast Hub is an interactive site where users can explore podcast episodes by category, search through
-            tags, open episode details,
-            and play audio in a mini player. It also includes an upgraded AI Studio for creating topic-based podcast
-            scripts with voice playback.
-          </p>
-        </div>
+        <div class="panel" style="margin-bottom:24px; display:flex; gap:24px; align-items:center;">
+
+          <!-- LEFT SIDE -->
+          <div style="flex:1;">
+            <h3 style="margin:0 0 12px;">About this website</h3>
+            <p style="margin:0; line-height:1.7; color:var(--muted);">
+              AI Podcast Hub is an interactive site where users can explore podcast episodes by category, search through tags, open episode details, and play audio in a mini player. It also includes an upgraded AI Studio for creating topic-based podcast scripts with voice playback.
+            </p>
+          </div>
+
+          <!-- RIGHT SIDE (CLICKABLE PODCAST CARD) -->
+          <div style="flex:1; display:flex; justify-content:center;">
+    
+            <div onclick="playEpisode({
+              title: 'About Us',
+              audio: 'about_us/about_us.mp3',
+              cover: 'covers/about_us.png',
+              category: 'General',
+              duration: '1:00'
+            })"
+            style="cursor:pointer; max-width:280px; width:100%; border-radius:18px; overflow:hidden; transition:transform 0.2s;">
+
+               <img src="covers/about_us.png" style="width:100%; display:block;">
+
+           </div>
+
+         </div>
+
+      </div>
 
         <div class="panel">
           <h3 class="panel-title panel-title-spacious">Our team</h3>
