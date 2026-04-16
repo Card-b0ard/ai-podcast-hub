@@ -1687,6 +1687,7 @@ body.dark-mode .progress-bar {
   border: 0;
 }
 
+.member-portrait,
 .member-portrait--placeholder {
   display: none !important;
 }
