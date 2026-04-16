@@ -221,7 +221,7 @@ window.AppData = {
       name: 'Nikhil',
       role: 'Web Developer',
       bio: 'Built the EchoHub website, focusing on design, functionality, and user experience. Integrated features like the mini-player, search, and AI for smooth navigation.',
-      imageUrl: 'about_us/nikhil.png',
+      imageUrl: '',
       mediaLabel: 'Audio or video',
       mediaUrl: '',
       mediaPlaceholder: 'Add a media file in the about_us folder, then update this card with its path.'
