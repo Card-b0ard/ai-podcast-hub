@@ -1687,9 +1687,18 @@ body.dark-mode .progress-bar {
   border: 0;
 }
 
-.member-portrait,
+.member-portrait {
+  display: none !important;
+}
+
 .member-portrait--placeholder {
   display: none !important;
+}
+
+.team-card {
+  display: flex !important;
+  flex-direction: column;
+  gap: 8px;
 }
 
 background: radial-gradient(circle at 50
